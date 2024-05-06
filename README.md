@@ -62,8 +62,6 @@ It's very important for any retail store to gain insights on the demand for thei
 
 *Product Popularity* defines the items that are selling well, in other words they're the best sellers.
 
-> You can check the code from here &rarr; [Products Popularity Query](codes/ProductPopularity.sql)
-
 On the other hand, *Product Profitability* determines the amount of profit that each product makes in a particular period.
 
 
