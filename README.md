@@ -42,21 +42,9 @@ As a retial store, we're interested to view the revenue data for each month for 
 
 So, we've aggregated the total revenue for each month in the year `2011` and shown the corresponding quarter. The data is sorted by total revenue in descending order partitioned by quarter.
 
-<div align="center">
-  <img src="images/seasonal-trends.jpg" alt="Image" width=600>
-  <p><em>Total Revenue Per Month</em></p>
-</div>
-
-> You can check the code from here &rarr;  
 
 Besides, we've decided to dig deeper into the behavior of the revenue for each quarter and measure the *Quarter on Quarter* metric which represents the rate of change between quarterly fiscal data. It helps in determining the store's quarterly growth.
 
-<div align="center">
-  <img src="images/QoQ.jpg" alt="Image" width=600>
-  <p><em>Quarter on Quarter %</em></p>
-</div>
-
-> You can check the code from here &rarr;  
 
 ---
 
@@ -66,13 +54,6 @@ As a retail store which helps thousands of customers to get their products, we'r
 
 This helps us to define the top 10 customers who participated in our growth, and make a decision to invest in those customers.
 
-<div align="center">
-  <img src="images/average-purchase-value.jpg" alt="Image" width=800>
-  <p><em>Average Purchase Value Per Customer</em></p>
-</div>
-
-> You can check the code from here &rarr;  
-
 ---
 
 ### Products Popularity and Profitability ###
@@ -81,21 +62,10 @@ It's very important for any retail store to gain insights on the demand for thei
 
 *Product Popularity* defines the items that are selling well, in other words they're the best sellers.
 
-<div align="center">
-  <img src="images/products-popularity.jpg" alt="Image" width=600>
-  <p><em>Best Sellers of our Online Retail Store</em></p>
-</div>
-
 > You can check the code from here &rarr; [Products Popularity Query](codes/ProductPopularity.sql)
 
 On the other hand, *Product Profitability* determines the amount of profit that each product makes in a particular period.
 
-<div align="center">
-  <img src="images/products-profitability.jpg" alt="Image" width=600>
-  <p><em>Products Profitability</em></p>
-</div>
-
-> You can check the code from here &rarr; [Products Profitability Query](codes/ProductProfitability.sql)
 
 ---
 
@@ -123,20 +93,6 @@ After calculting the *Recency*, *Frequency*, and *Monetary*, customers are class
 
 After getting the three scores, *R_Score*, *F_Score*, and *M_Score*. Our customers can be divided into segments according to the values of those scores. Here, I've divided the customers on only 2 values *R_Score*, and the average value of *F_Score* and *M_score* which is the *FM_Score*.
 
-*Customers are segmented according to the following table:*
-<div align="center">
-  <img src="images/customer-segmentation.jpg" alt="Image" width=500>
-  <p><em>Customer Segmentation</em></p>
-</div>
-
-*Here is a snapshot of the customer segments results from the RFM Analysis:*
-<div align="center">
-  <img src="images/monetary-model.jpg" alt="Image">
-  <p><em>Customer Segmentation according to RFM Model</em></p>
-</div>
-
-> You can check the whole code from here &rarr; [RFM Model Queries](codes/MonetaryModel.sql)
-
 ---
 
 ## Customers Purchasing Behavior ##
@@ -145,16 +101,8 @@ After getting the three scores, *R_Score*, *F_Score*, and *M_Score*. Our custome
 
 Having a dataset with the purchasing dates and amount spent for each customer helps our retail store to track the customers behavior in purchasing our products. One of the KPIs which helps us is the number of consecutive purchasing days of each customer. The customers who but regularly from our retail store are so valuable and we need to care about them.
 
-> Click here to show the dataset &rarr; [Daily Purchasing Dataset](datasets/daily-purchasing.csv)
 
 Using *Analytical SQL* and *Window Functions*, it's easy to track the consecutive days through `LAG` function to get each previous purchasing day and compare the results with the actual previous days in calender. This results in getting multiple number of consecutive days per customer, but getting the maximum of them is easier using `MAX` function.
-
-> You can check the whole code from here &rarr; [Tracing Customers Purchasing Behavior](codes/CustomersPurchasingBehvior.sql)
-
-<div align="center">
-  <img src="images/max-consecutive-days.jpg" alt="Image" width=600>
-  <p><em>Sample of the Maximum Consecutive Days of some Customers</em></p>
-</div>
 
 ---
 
@@ -163,12 +111,5 @@ Using *Analytical SQL* and *Window Functions*, it's easy to track the consecutiv
 We're interested in getting the average number of days/transactions over all customers to reach a spent threshold of 250 LE. This value differs from customer to customer depending on the number of times they purchased, and the total amount spent for each order. Besides, there're some customers who didn't reach this threshold.
 
 After performing some calculations using *Analytical SQL*, I've found that, on average, the number of days/transactions customers made to reach this threshold is `7` days/transactions.
-
-> You can check the whole code from here &rarr; [Average Number of Days to reach a Threshold](codes/NumberOfDaysToThreshold.sql.sql)
-
-<div align="center">
-  <img src="images/number-of-days.jpg" alt="Image" width=600>
-  <p><em>Random sample of the number of days/transactions made to reach a threshold of 250 LE</em></p>
-</div>
 
 ---
