@@ -2,8 +2,6 @@
 
 This project aims to analyze the data of an __Online Retail Store__ to gather some insights and make decisions based on *Products Popularity*, *Products and Customers Profitability*, *Customer Segmentation*, and some other metrics using __Analytical SQL__ such as *Window Functions*, *CTEs* ... etc.
 
-Also, the data is visualized through various charts to add more clearness to the insights and understand sales trends and uncover potential opportunities for growth.
-
 *The flow of the project is as the following:*
 - Data was ingested into `Oracle DBMs` through `DBeaver` after creating the tables in the database.
 - The analysis was done using *Analytical SQL* and *Window Functions*.
@@ -14,19 +12,13 @@ Also, the data is visualized through various charts to add more clearness to the
   - Tracking customers behavior through their purchasing data
 - All figures and charts are created using `Excel Sheets`.
 
-*The repository consists of 3 directories:*
-- `codes` &rarr; has all the `.sql` files that contains the queries.
-- `datasets` &rarr; has 2 `.csv` files of the datasets and 2 `.sql` files for the DDL queries of creating the tables.
-- `images` &rarr; has all the figures used in this repo.
-
-
 ---
 
 ## Data Exploration ##
 
 As the data exploration phase is one of the most important phases of any data analytics project, so let's start with. This phase made me understand the aspects of our retail data such as the size of data, the number of customers that purchased in a specified period, the year we're trying to analyze its data, and the products that are included in this analysis.
 
-> Click here to show the dataset &rarr; [Online Retail Store Dataset](datasets/online-retail.csv)
+
 
 *After some exploration, I've concluded that:*
 1. Total number of records is `12858`.
@@ -36,7 +28,7 @@ As the data exploration phase is one of the most important phases of any data an
 5. Our period of interest is between `Dec 12, 2010` and `Dec 9, 2011`.
 6. `717` invoices have been made by different customers.
 
-> You can check the code from here &rarr; [Data Exploration Queries](codes/Exploration.sql)
+
 
 ---
 
@@ -55,7 +47,7 @@ So, we've aggregated the total revenue for each month in the year `2011` and sho
   <p><em>Total Revenue Per Month</em></p>
 </div>
 
-> You can check the code from here &rarr; [Seasonal Trends Query](codes/SeasonalTrends.sql)
+> You can check the code from here &rarr;  
 
 Besides, we've decided to dig deeper into the behavior of the revenue for each quarter and measure the *Quarter on Quarter* metric which represents the rate of change between quarterly fiscal data. It helps in determining the store's quarterly growth.
 
@@ -64,7 +56,7 @@ Besides, we've decided to dig deeper into the behavior of the revenue for each q
   <p><em>Quarter on Quarter %</em></p>
 </div>
 
-> You can check the code from here &rarr; [Quarterly Trends Query](codes/Quarter-on-Quarter.sql)
+> You can check the code from here &rarr;  
 
 ---
 
@@ -79,7 +71,7 @@ This helps us to define the top 10 customers who participated in our growth, and
   <p><em>Average Purchase Value Per Customer</em></p>
 </div>
 
-> You can check the code from here &rarr; [Average Purchase Value Query](codes/AveragePurchaseValuePerCustomer.sql)
+> You can check the code from here &rarr;  
 
 ---
 
@@ -177,15 +169,6 @@ After performing some calculations using *Analytical SQL*, I've found that, on a
 <div align="center">
   <img src="images/number-of-days.jpg" alt="Image" width=600>
   <p><em>Random sample of the number of days/transactions made to reach a threshold of 250 LE</em></p>
-</div>
-
----
-
-## Dashboard ##
-
-<div align="center">
-  <img src="images/dashboard.jpg" alt="Image">
-  <p><em>Online Retail Store Dashboard</em></p>
 </div>
 
 ---
